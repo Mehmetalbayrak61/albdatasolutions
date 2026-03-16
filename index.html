@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alb Data Solutions | Power BI, SQL & Excel Danışmanlığı</title>
+<meta name="description" content="Alb Data Solutions - Power BI, SQL ve Excel danışmanlığı ile verilerinizi stratejik güce dönüştürün. İş zekası, veritabanı optimizasyonu ve otomasyon çözümleri.">
+<meta name="keywords" content="Power BI, SQL, Excel, veri danışmanlığı, iş zekası, dashboard, DAX, VBA, otomasyon, İstanbul">
+<meta name="author" content="Alb Data Solutions">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://albdata.com">
+<!-- Open Graph -->
+<meta property="og:title" content="Alb Data Solutions | Power BI, SQL & Excel Danışmanlığı">
+<meta property="og:description" content="Verilerinizi stratejik güce dönüştürün. Power BI, SQL ve Excel uzmanlığıyla iş süreçlerinizi optimize ediyoruz.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://albdata.com">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:site_name" content="Alb Data Solutions">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Alb Data Solutions | Power BI, SQL & Excel">
+<meta name="twitter:description" content="Verilerinizi stratejik güce dönüştürün. Power BI, SQL ve Excel uzmanlığı.">
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="data:image/png;base64,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"><rect width='40' height='40' rx='10' fill='%233b82f6'/><text x='20' y='27' font-family='monospace' font-size='16' font-weight='bold' fill='white' text-anchor='middle'>AD</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+[data-theme="dark"]{--bg-primary:#0a0a0f;--bg-secondary:#111118;--bg-card:#16161f;--text-primary:#f1f5f9;--text-secondary:#94a3b8;--text-muted:#64748b;--border:rgba(255,255,255,0.06);--border-hover:rgba(255,255,255,0.12);--nav-bg:rgba(10,10,15,0.8);--nav-bg-scroll:rgba(10,10,15,0.95);--shadow:rgba(0,0,0,0.3);--input-bg:#0a0a0f}
+
+:root{--accent-blue:#3b82f6;--accent-cyan:#06b6d4;--accent-violet:#8b5cf6;--accent-emerald:#10b981;--accent-orange:#f59e0b;--glow-blue:rgba(59,130,246,0.15)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:'Outfit',sans-serif;background:var(--bg-primary);color:var(--text-primary);overflow-x:hidden;-webkit-font-smoothing:antialiased;transition:background .4s,color .4s}
+::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:var(--bg-primary)}::-webkit-scrollbar-thumb{background:var(--accent-blue);border-radius:3px}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 2rem;height:72px;display:flex;align-items:center;justify-content:space-between;background:var(--nav-bg);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:all .3s}
+nav.scrolled{background:var(--nav-bg-scroll);box-shadow:0 4px 30px var(--shadow)}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text-primary)}
+.logo-icon{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--accent-blue),var(--accent-cyan));display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:16px;color:#fff;position:relative;overflow:hidden}
+.nav-logo-img{height:56px;width:auto;border-radius:8px;object-fit:contain}
+.footer-logo-img{height:36px;width:auto;border-radius:4px;object-fit:contain}
+.logo-icon::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent 40%,rgba(255,255,255,.2))}
+.logo-text{font-weight:700;font-size:1.15rem;letter-spacing:-.02em}
+.logo-text span{background:linear-gradient(135deg,var(--accent-blue),var(--accent-cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.nav-center{display:flex;align-items:center;gap:2rem;list-style:none}
+.nav-center a{color:var(--text-secondary);text-decoration:none;font-size:.88rem;font-weight:500;transition:color .2s;position:relative}
+.nav-center a:hover{color:var(--text-primary)}
+.nav-center a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:linear-gradient(90deg,var(--accent-blue),var(--accent-cyan));transition:width .3s}
+.nav-center a:hover::after{width:100%}
+.nav-right{display:flex;align-items:center;gap:10px}
+
+.nav-cta-btn{padding:9px 20px;background:linear-gradient(135deg,var(--accent-blue),var(--accent-cyan));color:#fff;border:none;border-radius:8px;font-family:'Outfit';font-size:.85rem;font-weight:600;cursor:pointer;transition:all .2s;text-decoration:none}
+.nav-cta-btn:hover{transform:translateY(-1px);box-shadow:0 4px 20px var(--glow-blue)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{width:24px;height:2px;background:var(--text-primary);border-radius:2px;transition:all .3s}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;padding:120px 2rem 80px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(59,130,246,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(59,130,246,.03) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse at center,#000 30%,transparent 70%)}
+.hero-orb{position:absolute;border-radius:50%;filter:blur(100px);animation:float 20s ease-in-out infinite}
+.hero-orb-1{width:600px;height:600px;background:var(--accent-blue);top:-200px;right:-100px;opacity:.12}
+.hero-orb-2{width:500px;height:500px;background:var(--accent-violet);bottom:-150px;left:-100px;opacity:.1;animation-delay:-10s}
+.hero-orb-3{width:300px;height:300px;background:var(--accent-cyan);top:50%;left:50%;transform:translate(-50%,-50%);opacity:.06;animation-delay:-5s}
+@keyframes float{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(30px,-30px) scale(1.05)}66%{transform:translate(-20px,20px) scale(.95)}}
+.hero-content{position:relative;z-index:1;max-width:900px;text-align:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;border-radius:100px;background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.15);font-size:.82rem;font-weight:500;color:var(--accent-cyan);margin-bottom:2rem;animation:fadeUp .8s ease forwards}
+.hero-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--accent-emerald);animation:pulse-dot 2s infinite}
+@keyframes pulse-dot{0%,100%{opacity:1}50%{opacity:.4}}
+.hero h1{font-size:clamp(2.8rem,6vw,4.8rem);font-weight:800;line-height:1.08;letter-spacing:-.03em;margin-bottom:1.5rem;animation:fadeUp .8s ease .15s forwards}
+.gradient-text{background:linear-gradient(135deg,var(--accent-blue) 0%,var(--accent-cyan) 50%,var(--accent-violet) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-size:200% auto;animation:shimmer 4s linear infinite}
+@keyframes shimmer{0%{background-position:0% center}100%{background-position:200% center}}
+.hero p{font-size:1.2rem;color:var(--text-secondary);max-width:600px;margin:0 auto 2.5rem;line-height:1.7;font-weight:300;animation:fadeUp .8s ease .3s forwards}
+.hero-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;animation:fadeUp .8s ease .45s forwards}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.btn-primary{padding:14px 32px;background:linear-gradient(135deg,var(--accent-blue),var(--accent-cyan));color:#fff;border:none;border-radius:10px;font-family:'Outfit';font-size:1rem;font-weight:600;cursor:pointer;transition:all .3s;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px var(--glow-blue)}
+.btn-secondary{padding:14px 32px;background:transparent;color:var(--text-primary);border:1px solid var(--border-hover);border-radius:10px;font-family:'Outfit';font-size:1rem;font-weight:500;cursor:pointer;transition:all .3s;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.btn-secondary:hover{background:rgba(59,130,246,.05);border-color:var(--accent-blue);transform:translateY(-2px)}
+.hero-metrics{display:flex;justify-content:center;gap:3rem;margin-top:4rem;animation:fadeUp .8s ease .6s forwards}
+.metric{text-align:center}
+.metric-number{font-size:2.2rem;font-weight:800;font-family:'JetBrains Mono',monospace;background:linear-gradient(135deg,var(--accent-blue),var(--accent-cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.metric-label{font-size:.82rem;color:var(--text-muted);margin-top:4px}
+
+/* SECTIONS */
+section{padding:100px 2rem;position:relative}
+.section-header{text-align:center;max-width:650px;margin:0 auto 4rem}
+.section-label{font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.15em;color:var(--accent-cyan);margin-bottom:1rem;font-family:'JetBrains Mono',monospace}
+.section-title{font-size:clamp(2rem,4vw,2.8rem);font-weight:800;letter-spacing:-.02em;line-height:1.15;margin-bottom:1rem}
+.section-desc{font-size:1.05rem;color:var(--text-secondary);line-height:1.7;font-weight:300}
+.alt-bg{background:var(--bg-secondary)}
+.parallax-shape{position:absolute;border-radius:50%;opacity:.04;pointer-events:none}
+
+/* SERVICES */
+.services-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.service-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:2.5rem 2rem;transition:all .4s cubic-bezier(.4,0,.2,1);position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--card-accent);opacity:0;transition:opacity .4s}
+.service-card:hover{transform:translateY(-6px);border-color:var(--border-hover);box-shadow:0 20px 60px var(--shadow)}
+.service-card:hover::before{opacity:1}
+.svc-icon{width:56px;height:56px;margin-bottom:1.5rem}
+.service-card:nth-child(1){--card-accent:linear-gradient(135deg,var(--accent-orange),#ef4444)}
+.service-card:nth-child(2){--card-accent:linear-gradient(135deg,var(--accent-blue),var(--accent-cyan))}
+.service-card:nth-child(3){--card-accent:linear-gradient(135deg,var(--accent-emerald),var(--accent-cyan))}
+.service-card h3{font-size:1.3rem;font-weight:700;margin-bottom:.75rem}
+.service-card p{color:var(--text-secondary);line-height:1.7;font-size:.95rem;font-weight:300}
+.service-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:1.5rem}
+.service-features{list-style:none;display:flex;flex-direction:column;gap:8px;margin:1.25rem 0;padding:1.25rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.service-features li{display:flex;align-items:center;gap:10px;font-size:.88rem;color:var(--text-secondary);font-weight:300;line-height:1.4}
+.service-features li::before{content:'';width:6px;height:6px;min-width:6px;border-radius:50%;background:var(--accent-cyan)}
+.service-card:nth-child(1) .service-features li::before{background:var(--accent-orange)}
+.service-card:nth-child(2) .service-features li::before{background:var(--accent-blue)}
+.service-card:nth-child(3) .service-features li::before{background:var(--accent-emerald)}
+.service-tag{padding:5px 12px;border-radius:6px;font-size:.75rem;font-family:'JetBrains Mono',monospace;font-weight:500;background:rgba(59,130,246,.06);border:1px solid var(--border);color:var(--text-muted)}
+
+/* DEMO */
+.demo-container{max-width:1100px;margin:0 auto;border-radius:20px;overflow:hidden;border:1px solid var(--border);background:var(--bg-card)}
+.demo-toolbar{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;background:var(--bg-secondary);border-bottom:1px solid var(--border)}
+.demo-dots{display:flex;gap:6px}.demo-dots span{width:10px;height:10px;border-radius:50%}
+.demo-dots span:nth-child(1){background:#ef4444}.demo-dots span:nth-child(2){background:#f59e0b}.demo-dots span:nth-child(3){background:#10b981}
+.demo-toolbar-title{font-size:.78rem;color:var(--text-muted);font-family:'JetBrains Mono',monospace}
+.demo-dashboard{padding:1.5rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.demo-kpi{padding:1.2rem;border-radius:12px;border:1px solid var(--border);background:var(--bg-primary);text-align:center;transition:all .3s}
+.demo-kpi:hover{border-color:var(--accent-blue);transform:translateY(-2px)}
+.demo-kpi-value{font-family:'JetBrains Mono',monospace;font-size:1.6rem;font-weight:700}
+.demo-kpi-label{font-size:.75rem;color:var(--text-muted);margin-top:4px}
+.demo-kpi-change{font-size:.72rem;margin-top:6px;font-weight:600}
+.demo-kpi-change.up{color:var(--accent-emerald)}.demo-kpi-change.down{color:#ef4444}
+.demo-charts{grid-column:1/-1;display:grid;grid-template-columns:2fr 1fr;gap:1rem}
+.demo-chart-box{padding:1.2rem;border-radius:12px;border:1px solid var(--border);background:var(--bg-primary)}
+.demo-chart-title{font-size:.82rem;font-weight:600;margin-bottom:1rem;color:var(--text-secondary)}
+.bar-chart{display:flex;align-items:flex-end;gap:8px;height:140px;padding-top:10px}
+.bar-group{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px}
+.bar{width:100%;border-radius:4px 4px 0 0;min-height:4px}
+.bar.blue{background:linear-gradient(180deg,var(--accent-blue),rgba(59,130,246,.6))}
+.bar.cyan{background:linear-gradient(180deg,var(--accent-cyan),rgba(6,182,212,.6))}
+.bar-label{font-size:.65rem;color:var(--text-muted);font-family:'JetBrains Mono',monospace}
+.donut-chart{display:flex;align-items:center;justify-content:center;padding:10px}
+.donut-chart svg{width:140px;height:140px}
+.demo-cta{grid-column:1/-1;text-align:center;padding:1.5rem;border-top:1px solid var(--border);margin:.5rem -1.5rem -1.5rem;background:var(--bg-secondary)}
+.demo-cta p{font-size:.88rem;color:var(--text-secondary);margin-bottom:.75rem}
+
+/* ABOUT */
+.about-content{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.about-visual{position:relative;aspect-ratio:1;display:flex;align-items:center;justify-content:center}
+.about-ring{width:300px;height:300px;border-radius:50%;border:1px solid var(--border);position:relative;display:flex;align-items:center;justify-content:center}
+.about-ring::before{content:'';position:absolute;inset:-40px;border-radius:50%;border:1px dashed rgba(59,130,246,.1);animation:spin 60s linear infinite}
+.about-ring::after{content:'';position:absolute;inset:-80px;border-radius:50%;border:1px dashed rgba(139,92,246,.08);animation:spin 90s linear infinite reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+.about-center{width:160px;height:160px;border-radius:50%;background:linear-gradient(135deg,rgba(59,130,246,.1),rgba(6,182,212,.1));border:1px solid rgba(59,130,246,.15);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px}
+.about-center-text{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--accent-cyan);font-weight:600;letter-spacing:.1em;margin-top:6px}
+.orbit-item{position:absolute;width:48px;height:48px;border-radius:12px;background:var(--bg-card);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px var(--shadow)}
+.orbit-item:nth-child(1){top:-10px;left:50%;transform:translateX(-50%)}
+.orbit-item:nth-child(2){right:-10px;top:50%;transform:translateY(-50%)}
+.orbit-item:nth-child(3){bottom:-10px;left:50%;transform:translateX(-50%)}
+.orbit-item:nth-child(4){left:-10px;top:50%;transform:translateY(-50%)}
+.about-text h3{font-size:1.6rem;font-weight:700;margin-bottom:1.5rem;letter-spacing:-.02em}
+.about-text p{color:var(--text-secondary);line-height:1.8;margin-bottom:1rem;font-weight:300}
+.about-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:2rem}
+.about-stat{padding:1.2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px}
+.about-stat-num{font-family:'JetBrains Mono',monospace;font-size:1.5rem;font-weight:700;color:var(--accent-cyan)}
+.about-stat-label{font-size:.82rem;color:var(--text-muted);margin-top:2px}
+
+/* PRICING */
+.pricing-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;align-items:start}
+.pricing-card{background:var(--bg-card);border:1px solid var(--border);border-radius:20px;padding:2.5rem 2rem;position:relative;overflow:hidden;transition:all .4s}
+.pricing-card:hover{transform:translateY(-4px);box-shadow:0 20px 60px var(--shadow)}
+.pricing-card.featured{border-color:var(--accent-blue);box-shadow:0 0 40px var(--glow-blue)}
+.pricing-card.featured::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent-blue),var(--accent-cyan))}
+.pricing-badge{position:absolute;top:1.5rem;right:1.5rem;padding:4px 12px;border-radius:100px;background:linear-gradient(135deg,var(--accent-blue),var(--accent-cyan));font-size:.7rem;font-weight:700;color:#fff;text-transform:uppercase}
+.pricing-name{font-size:1.1rem;font-weight:600;color:var(--text-secondary);margin-bottom:.5rem}
+.pricing-price{font-size:2.8rem;font-weight:800;letter-spacing:-.03em;margin-bottom:.25rem}
+.pricing-period{font-size:.82rem;color:var(--text-muted);margin-bottom:2rem}
+.pricing-features{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:2rem}
+.pricing-features li{display:flex;align-items:center;gap:10px;font-size:.9rem;color:var(--text-secondary)}
+.pricing-features li svg{flex-shrink:0}
+.check-svg{display:inline-block}
+.pricing-btn{width:100%;padding:13px;border-radius:10px;font-family:'Outfit';font-size:.95rem;font-weight:600;cursor:pointer;transition:all .3s;text-align:center;border:none}
+.pricing-btn-primary{background:linear-gradient(135deg,var(--accent-blue),var(--accent-cyan));color:#fff}
+.pricing-btn-primary:hover{box-shadow:0 8px 30px var(--glow-blue);transform:translateY(-1px)}
+.pricing-btn-secondary{background:transparent;border:1px solid var(--border-hover);color:var(--text-primary)}
+.pricing-btn-secondary:hover{border-color:var(--accent-blue);background:rgba(59,130,246,.05)}
+
+/* PROCESS */
+.process-timeline{max-width:900px;margin:0 auto;position:relative}
+.process-timeline::before{content:'';position:absolute;left:28px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--accent-blue),var(--accent-violet),var(--accent-emerald));opacity:.3}
+.process-step{display:flex;gap:2rem;padding:2rem 0;position:relative}
+.step-number{width:58px;height:58px;min-width:58px;border-radius:50%;background:var(--bg-card);border:2px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:1.1rem;color:var(--accent-blue);z-index:1;transition:all .3s}
+.process-step:hover .step-number{border-color:var(--accent-blue);box-shadow:0 0 20px var(--glow-blue)}
+.step-content h3{font-size:1.2rem;font-weight:700;margin-bottom:.5rem}
+.step-content p{color:var(--text-secondary);line-height:1.7;font-weight:300}
+
+/* TECH */
+.tech-grid{max-width:800px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+.tech-item{padding:2rem 1.5rem;text-align:center;background:var(--bg-card);border:1px solid var(--border);border-radius:14px;transition:all .3s}
+.tech-item:hover{transform:translateY(-4px);border-color:rgba(59,130,246,.2);box-shadow:0 12px 40px var(--shadow)}
+.tech-item-name{font-weight:600;font-size:.95rem;margin-top:.75rem;margin-bottom:.25rem}
+.tech-item-desc{font-size:.78rem;color:var(--text-muted)}
+
+/* BLOG */
+.blog-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.blog-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:all .4s;cursor:pointer}
+.blog-card:hover{transform:translateY(-4px);box-shadow:0 20px 60px var(--shadow);border-color:var(--border-hover)}
+.blog-thumb{height:180px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.blog-thumb-bg{position:absolute;inset:0}
+.blog-body{padding:1.5rem}
+.blog-meta{display:flex;align-items:center;gap:12px;margin-bottom:.75rem}
+.blog-category{padding:3px 10px;border-radius:6px;font-size:.7rem;font-weight:600;font-family:'JetBrains Mono',monospace;background:rgba(59,130,246,.1);color:var(--accent-blue);border:1px solid rgba(59,130,246,.15)}
+.blog-date{font-size:.78rem;color:var(--text-muted)}
+.blog-card h3{font-size:1.1rem;font-weight:700;margin-bottom:.5rem;line-height:1.4}
+.blog-excerpt{font-size:.88rem;color:var(--text-secondary);line-height:1.6;font-weight:300}
+.blog-read{display:inline-flex;align-items:center;gap:6px;margin-top:1rem;font-size:.85rem;font-weight:600;color:var(--accent-blue);transition:gap .2s}
+.blog-card:hover .blog-read{gap:10px}
+
+/* FAQ */
+.faq-list{max-width:750px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.faq-item{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:all .3s}
+.faq-item.open{border-color:rgba(59,130,246,.2)}
+.faq-question{padding:1.25rem 1.5rem;display:flex;align-items:center;justify-content:space-between;cursor:pointer;font-weight:600;font-size:1rem;gap:1rem;user-select:none;transition:color .2s}
+.faq-question:hover{color:var(--accent-blue)}
+.faq-icon{width:28px;height:28px;min-width:28px;border-radius:8px;background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.12);display:flex;align-items:center;justify-content:center;transition:all .3s;font-size:1rem;color:var(--accent-blue)}
+.faq-item.open .faq-icon{background:var(--accent-blue);color:#fff;transform:rotate(45deg)}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.4,0,.2,1)}
+.faq-answer-inner{padding:0 1.5rem 1.25rem;color:var(--text-secondary);line-height:1.7;font-weight:300;font-size:.95rem}
+
+/* TESTIMONIALS */
+.testimonials-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.testimonial-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:2rem;transition:all .3s}
+.testimonial-card:hover{transform:translateY(-2px);border-color:var(--border-hover)}
+.testimonial-stars{color:var(--accent-orange);font-size:.9rem;margin-bottom:1rem;letter-spacing:2px}
+.testimonial-text{color:var(--text-secondary);line-height:1.7;font-size:.95rem;font-weight:300;font-style:italic;margin-bottom:1.5rem}
+.testimonial-author{display:flex;align-items:center;gap:12px}
+.testimonial-avatar{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;color:#fff}
+.testimonial-info h4{font-size:.9rem;font-weight:600}
+.testimonial-info span{font-size:.78rem;color:var(--text-muted)}
+
+/* CONTACT */
+.contact-wrapper{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.contact-info{display:flex;flex-direction:column;gap:2rem}
+.contact-info h3{font-size:1.8rem;font-weight:700}
+.contact-info>p{color:var(--text-secondary);line-height:1.7;font-weight:300}
+.contact-item{display:flex;align-items:flex-start;gap:16px}
+.contact-item-icon{width:44px;height:44px;min-width:44px;border-radius:10px;background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.12);display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+.contact-item-text h4{font-size:.95rem;font-weight:600;margin-bottom:2px}
+.contact-item-text p,.contact-item-text a{font-size:.88rem;color:var(--text-secondary);text-decoration:none;transition:color .2s}
+.contact-item-text a:hover{color:var(--accent-cyan)}
+.contact-form{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:2.5rem}
+.form-group{margin-bottom:1.25rem}
+.form-group label{display:block;font-size:.85rem;font-weight:500;margin-bottom:6px;color:var(--text-secondary)}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 16px;background:var(--input-bg);border:1px solid var(--border);border-radius:10px;color:var(--text-primary);font-family:'Outfit';font-size:.95rem;transition:border-color .2s,box-shadow .2s;outline:none}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--accent-blue);box-shadow:0 0 0 3px var(--glow-blue)}
+.form-group textarea{min-height:120px;resize:vertical}
+.form-group select{cursor:pointer}
+.form-group select option{background:var(--bg-card);color:var(--text-primary)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.btn-submit{width:100%;padding:14px;background:linear-gradient(135deg,var(--accent-blue),var(--accent-cyan));color:#fff;border:none;border-radius:10px;font-family:'Outfit';font-size:1rem;font-weight:600;cursor:pointer;transition:all .3s}
+.btn-submit:hover{transform:translateY(-2px);box-shadow:0 8px 30px var(--glow-blue)}
+
+/* WHATSAPP */
+.whatsapp-fab{position:fixed;bottom:28px;right:28px;z-index:999;width:60px;height:60px;border-radius:50%;background:#25d366;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.3);transition:all .3s;text-decoration:none;animation:fabPulse 3s ease-in-out infinite}
+.whatsapp-fab:hover{transform:scale(1.1);box-shadow:0 6px 30px rgba(37,211,102,.5)}
+.whatsapp-fab svg{width:30px;height:30px;fill:#fff}
+@keyframes fabPulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.3)}50%{box-shadow:0 4px 20px rgba(37,211,102,.3),0 0 0 10px rgba(37,211,102,.1)}}
+.wa-tip{position:absolute;right:70px;top:50%;transform:translateY(-50%);background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:10px 16px;font-size:.82rem;font-weight:500;color:var(--text-primary);white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .3s;box-shadow:0 8px 24px var(--shadow)}
+.whatsapp-fab:hover .wa-tip{opacity:1}
+
+/* FOOTER */
+footer{background:var(--bg-secondary);border-top:1px solid var(--border);padding:3rem 2rem 2rem}
+.footer-content{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem}
+.footer-left{display:flex;align-items:center;gap:12px}
+.footer-logo-icon{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,var(--accent-blue),var(--accent-cyan));display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:12px;color:#fff}
+.footer-copy{font-size:.85rem;color:var(--text-muted)}
+.footer-links{display:flex;gap:1.5rem}
+.footer-links a{color:var(--text-muted);text-decoration:none;font-size:.85rem;transition:color .2s}
+.footer-links a:hover{color:var(--text-primary)}
+
+.mobile-menu{display:none;position:fixed;top:72px;left:0;right:0;background:var(--nav-bg-scroll);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:1.5rem 2rem;z-index:999;flex-direction:column;gap:1rem}
+.mobile-menu.open{display:flex}
+.mobile-menu a{color:var(--text-secondary);text-decoration:none;font-size:1.05rem;font-weight:500;padding:8px 0}
+
+.reveal{opacity:1;transform:translateY(0);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* SCROLL TO TOP */
+.scroll-top{position:fixed;bottom:100px;right:28px;z-index:998;width:44px;height:44px;border-radius:12px;background:var(--bg-card);border:1px solid var(--border);cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transform:translateY(10px);transition:all .3s;box-shadow:0 4px 16px var(--shadow)}
+.scroll-top.visible{opacity:1;visibility:visible;transform:translateY(0)}
+.scroll-top:hover{border-color:var(--accent-blue);transform:translateY(-2px);box-shadow:0 6px 20px var(--glow-blue)}
+.scroll-top svg{width:18px;height:18px;stroke:var(--accent-blue);fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+
+/* COOKIE BANNER */
+.cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:9998;background:var(--bg-card);border-top:1px solid var(--border);padding:1rem 2rem;display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap;transform:translateY(100%);transition:transform .5s cubic-bezier(.4,0,.2,1);box-shadow:0 -4px 20px var(--shadow)}
+.cookie-banner.show{transform:translateY(0)}
+.cookie-text{font-size:.88rem;color:var(--text-secondary);max-width:600px;line-height:1.5}
+.cookie-text a{color:var(--accent-blue);text-decoration:underline}
+.cookie-btns{display:flex;gap:8px}
+.cookie-btn{padding:8px 20px;border-radius:8px;font-family:'Outfit';font-size:.85rem;font-weight:600;cursor:pointer;transition:all .2s;border:none}
+.cookie-accept{background:linear-gradient(135deg,var(--accent-blue),var(--accent-cyan));color:#fff}
+.cookie-accept:hover{box-shadow:0 4px 16px var(--glow-blue)}
+.cookie-decline{background:transparent;border:1px solid var(--border);color:var(--text-secondary)}
+.cookie-decline:hover{border-color:var(--border-hover)}
+
+/* ACTIVE NAV LINK */
+.nav-center a.active{color:var(--text-primary)}
+.nav-center a.active::after{width:100%}
+
+/* SOCIAL ICONS */
+.social-links{display:flex;gap:10px;margin-top:1rem}
+.social-link{width:40px;height:40px;border-radius:10px;background:rgba(59,130,246,.06);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;transition:all .3s;text-decoration:none}
+.social-link:hover{border-color:var(--accent-blue);background:rgba(59,130,246,.1);transform:translateY(-2px)}
+.social-link svg{width:18px;height:18px;fill:var(--text-muted);transition:fill .3s}
+.social-link:hover svg{fill:var(--accent-blue)}
+
+/* FORM VALIDATION */
+.form-group input.error,.form-group select.error,.form-group textarea.error{border-color:#ef4444;box-shadow:0 0 0 3px rgba(239,68,68,.15)}
+.form-error{font-size:.75rem;color:#ef4444;margin-top:4px;display:none;align-items:center;gap:4px}
+.form-error.show{display:flex}
+.form-group input.success,.form-group textarea.success{border-color:var(--accent-emerald);box-shadow:0 0 0 3px rgba(16,185,129,.15)}
+.btn-submit:disabled{opacity:.6;cursor:not-allowed;transform:none!important}
+.btn-submit .spinner{display:inline-block;width:16px;height:16px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:btnSpin .6s linear infinite;margin-right:6px}
+@keyframes btnSpin{to{transform:rotate(360deg)}}
+
+@media(max-width:1024px){.services-grid,.pricing-grid,.blog-grid,.testimonials-grid{grid-template-columns:1fr 1fr}.tech-grid{grid-template-columns:repeat(2,1fr)}.demo-dashboard{grid-template-columns:repeat(2,1fr)}.demo-charts{grid-template-columns:1fr}}
+@media(max-width:768px){.nav-center,.nav-right .nav-cta-btn{display:none}.hamburger{display:flex}.services-grid,.testimonials-grid,.contact-wrapper,.about-content,.pricing-grid,.blog-grid{grid-template-columns:1fr}.tech-grid{grid-template-columns:repeat(2,1fr)}.demo-dashboard{grid-template-columns:1fr 1fr}.hero-metrics{gap:1.5rem;flex-wrap:wrap}.about-visual{order:-1}.form-row{grid-template-columns:1fr}.footer-content{flex-direction:column;text-align:center}section{padding:70px 1.25rem}.whatsapp-fab{width:52px;height:52px;bottom:20px;right:20px}.whatsapp-fab svg{width:26px;height:26px}.wa-tip{display:none}.pricing-card.featured{order:-1}.scroll-top{bottom:80px;right:20px;width:40px;height:40px}.cookie-banner{flex-direction:column;text-align:center;padding:1.25rem 1rem}}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="https://unpkg.com/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+try { emailjs.init("tg5rqRiHvR9ipPY56"); } catch(e){ console.log("EmailJS init skipped"); }
+</script>
+</head>
+<body>
+
+<!-- SCROLL TO TOP -->
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo"><img src="data:image/png;base64,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" alt="Alb Data Solutions" class="nav-logo-img"></a>
+  <ul class="nav-center">
+    <li><a href="#hizmetler" onclick="event.preventDefault();document.getElementById('hizmetler').scrollIntoView({behavior:'smooth',block:'start'})">Hizmetler</a></li>
+    <li><a href="#demo" onclick="event.preventDefault();document.getElementById('demo').scrollIntoView({behavior:'smooth',block:'start'})">Demo</a></li>
+    <li><a href="#hakkimizda" onclick="event.preventDefault();document.getElementById('hakkimizda').scrollIntoView({behavior:'smooth',block:'start'})">Hakkımızda</a></li>
+    <li><a href="#fiyatlandirma" onclick="event.preventDefault();document.getElementById('fiyatlandirma').scrollIntoView({behavior:'smooth',block:'start'})">Paketler</a></li>
+    <li><a href="#blog" onclick="event.preventDefault();document.getElementById('blog').scrollIntoView({behavior:'smooth',block:'start'})">Blog</a></li>
+    <li><a href="#sss" onclick="event.preventDefault();document.getElementById('sss').scrollIntoView({behavior:'smooth',block:'start'})">SSS</a></li>
+    <li><a href="#iletisim" onclick="event.preventDefault();document.getElementById('iletisim').scrollIntoView({behavior:'smooth',block:'start'})">İletişim</a></li>
+  </ul>
+  <div class="nav-right">
+
+    <a href="#iletisim" onclick="event.preventDefault();document.getElementById('iletisim').scrollIntoView({behavior:'smooth',block:'start'})" class="nav-cta-btn">İletişim</a>
+  </div>
+  <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#hizmetler" onclick="closeMenu();document.getElementById('hizmetler').scrollIntoView({behavior:'smooth',block:'start'})">Hizmetler</a>
+  <a href="#demo" onclick="closeMenu();document.getElementById('demo').scrollIntoView({behavior:'smooth',block:'start'})">Demo</a>
+  <a href="#hakkimizda" onclick="closeMenu();document.getElementById('hakkimizda').scrollIntoView({behavior:'smooth',block:'start'})">Hakkımızda</a>
+  <a href="#fiyatlandirma" onclick="closeMenu();document.getElementById('fiyatlandirma').scrollIntoView({behavior:'smooth',block:'start'})">Fiyatlar</a>
+  <a href="#blog" onclick="closeMenu();document.getElementById('blog').scrollIntoView({behavior:'smooth',block:'start'})">Blog</a>
+  <a href="#sss" onclick="closeMenu();document.getElementById('sss').scrollIntoView({behavior:'smooth',block:'start'})">SSS</a>
+  <a href="#iletisim" onclick="closeMenu();document.getElementById('iletisim').scrollIntoView({behavior:'smooth',block:'start'})">İletişim</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"><div class="hero-grid"></div><div class="hero-orb hero-orb-1"></div><div class="hero-orb hero-orb-2"></div><div class="hero-orb hero-orb-3"></div></div>
+  <div class="hero-content">
+    <div class="hero-badge"><span class="dot"></span><span>Veri Odaklı Çözümler</span></div>
+    <h1><span>Verilerinizi</span><br><span class="gradient-text">Stratejik Güce</span><br><span>Dönüştürün</span></h1>
+    <p>Power BI, SQL ve Excel uzmanlığıyla iş süreçlerinizi optimize ediyor, verilerinizden anlamlı iç görüler çıkarıyoruz.</p>
+    <div class="hero-buttons">
+      <a href="#iletisim" class="btn-primary">Ücretsiz Keşif Görüşmesi →</a>
+      <a href="#hizmetler" class="btn-secondary">Hizmetleri Keşfet</a>
+    </div>
+    <div class="hero-metrics">
+      <div class="metric"><div class="metric-number" data-target="150">0</div><div class="metric-label">Tamamlanan Proje</div></div>
+      <div class="metric"><div class="metric-number" data-target="98">0</div><div class="metric-label">Müşteri Memnuniyeti %</div></div>
+      <div class="metric"><div class="metric-number" data-target="40">0</div><div class="metric-label">Verimlilik Artışı %</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="hizmetler" class="alt-bg" style="position:relative;overflow:hidden">
+  <div class="parallax-shape" style="width:400px;height:400px;background:var(--accent-blue);top:-100px;right:-150px"></div>
+  <div class="section-header reveal">
+    <div class="section-label">// Hizmetlerimiz</div>
+    <h2 class="section-title">Uçtan Uca Veri Danışmanlığı</h2>
+    <p class="section-desc">İşletmenizin veri altyapısını güçlendiren üç temel uzmanlık alanımız</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <svg class="svc-icon" viewBox="0 0 56 56" fill="none"><rect width="56" height="56" rx="14" fill="rgba(245,158,11,0.1)" stroke="rgba(245,158,11,0.2)"/><rect x="12" y="28" width="8" height="16" rx="2" fill="#f59e0b" opacity=".7"/><rect x="24" y="20" width="8" height="24" rx="2" fill="#f59e0b" opacity=".85"/><rect x="36" y="12" width="8" height="32" rx="2" fill="#f59e0b"/><circle cx="16" cy="18" r="2" fill="#ef4444"/><circle cx="28" cy="14" r="2" fill="#ef4444"/><circle cx="40" cy="10" r="2" fill="#ef4444"/><line x1="16" y1="18" x2="28" y2="14" stroke="#ef4444" stroke-width="1.5" opacity=".6"/><line x1="28" y1="14" x2="40" y2="10" stroke="#ef4444" stroke-width="1.5" opacity=".6"/></svg>
+      <h3>Power BI Danışmanlığı</h3>
+      <p>Etkileşimli panolar ve raporlarla verilerinizi görselleştirin. Gerçek zamanlı iş zekası çözümleri sunuyoruz.</p>
+      <ul class="service-features">
+        <li>Özel dashboard ve rapor tasarımı</li>
+        <li>DAX formül yazımı ve optimizasyonu</li>
+        <li>Veri modelleme ve ilişki yönetimi</li>
+        <li>Power Query ile ETL süreçleri</li>
+        <li>Dataflow ve veri akışı kurulumu</li>
+        <li>Row-Level Security (RLS) yapılandırma</li>
+        <li>Otomatik yenileme ve gateway kurulumu</li>
+        <li>Mevcut raporların performans iyileştirmesi</li>
+      </ul>
+      <div class="service-tags"><span class="service-tag">Dashboard</span><span class="service-tag">DAX</span><span class="service-tag">ETL</span><span class="service-tag">Dataflow</span><span class="service-tag">RLS</span><span class="service-tag">Gateway</span></div>
+    </div>
+    <div class="service-card reveal">
+      <svg class="svc-icon" viewBox="0 0 56 56" fill="none"><rect width="56" height="56" rx="14" fill="rgba(59,130,246,0.1)" stroke="rgba(59,130,246,0.2)"/><ellipse cx="28" cy="16" rx="14" ry="5" stroke="#3b82f6" stroke-width="2" fill="rgba(59,130,246,.15)"/><path d="M14 16v8c0 2.76 6.27 5 14 5s14-2.24 14-5v-8" stroke="#3b82f6" stroke-width="2"/><path d="M14 24v8c0 2.76 6.27 5 14 5s14-2.24 14-5v-8" stroke="#3b82f6" stroke-width="2" opacity=".6"/><path d="M14 32v6c0 2.76 6.27 5 14 5s14-2.24 14-5v-6" stroke="#3b82f6" stroke-width="2" opacity=".3"/></svg>
+      <h3>SQL & Veri Tabanı</h3>
+      <p>Veritabanı tasarımı, sorgu optimizasyonu ve veri mimarisi. Performanslı altyapılar kuruyoruz.</p>
+      <ul class="service-features">
+        <li>Veritabanı tasarımı ve normalizasyon</li>
+        <li>T-SQL sorgu yazımı ve optimizasyonu</li>
+        <li>Stored Procedure ve Function geliştirme</li>
+        <li>SSIS ile veri entegrasyonu (ETL)</li>
+        <li>Index analizi ve performans iyileştirme</li>
+        <li>Otomatik yedekleme ve bakım planları</li>
+        <li>Veritabanı migrasyon ve versiyon yönetimi</li>
+        <li>Veri ambarı (Data Warehouse) tasarımı</li>
+      </ul>
+      <div class="service-tags"><span class="service-tag">T-SQL</span><span class="service-tag">SSIS</span><span class="service-tag">Stored Proc</span><span class="service-tag">Index</span><span class="service-tag">DWH</span><span class="service-tag">Migrasyon</span></div>
+    </div>
+    <div class="service-card reveal">
+      <svg class="svc-icon" viewBox="0 0 56 56" fill="none"><rect width="56" height="56" rx="14" fill="rgba(16,185,129,0.1)" stroke="rgba(16,185,129,0.2)"/><rect x="12" y="12" width="32" height="32" rx="4" stroke="#10b981" stroke-width="2" fill="none"/><line x1="12" y1="22" x2="44" y2="22" stroke="#10b981" stroke-width="1.5" opacity=".5"/><line x1="12" y1="32" x2="44" y2="32" stroke="#10b981" stroke-width="1.5" opacity=".5"/><line x1="24" y1="12" x2="24" y2="44" stroke="#10b981" stroke-width="1.5" opacity=".5"/><path d="M16 38l4-6 4 3 4-8 4 4" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <h3>Excel & Otomasyon</h3>
+      <p>İleri düzey Excel modelleri, VBA makrolar ve otomasyon çözümleri. Verimliliğinizi artırın.</p>
+      <ul class="service-features">
+        <li>VBA makro geliştirme ve otomasyon</li>
+        <li>Power Query ile veri dönüşümü</li>
+        <li>İleri düzey Pivot Table ve grafikler</li>
+        <li>Dinamik finansal modelleme</li>
+        <li>Otomatik raporlama sistemleri</li>
+        <li>Çoklu dosya birleştirme ve işleme</li>
+        <li>UserForm ile özel arayüz tasarımı</li>
+        <li>Excel-SQL veritabanı entegrasyonu</li>
+      </ul>
+      <div class="service-tags"><span class="service-tag">VBA</span><span class="service-tag">Power Query</span><span class="service-tag">Pivot</span><span class="service-tag">Makro</span><span class="service-tag">UserForm</span><span class="service-tag">Modelleme</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- DEMO -->
+<section id="demo">
+  <div class="section-header reveal">
+    <div class="section-label">// Canlı Demo</div>
+    <h2 class="section-title">Power BI Dashboard Örneği</h2>
+    <p class="section-desc">İnteraktif dashboard'larımızın nasıl göründüğüne bir göz atın</p>
+  </div>
+  <div class="demo-container reveal">
+    <div class="demo-toolbar"><div class="demo-dots"><span></span><span></span><span></span></div><div class="demo-toolbar-title">sales_dashboard_2026.pbix</div><div style="width:50px"></div></div>
+    <div class="demo-dashboard">
+      <div class="demo-kpi"><div class="demo-kpi-value" style="color:var(--accent-blue)">₺2.4M</div><div class="demo-kpi-label">Toplam Gelir</div><div class="demo-kpi-change up">↑ 12.5%</div></div>
+      <div class="demo-kpi"><div class="demo-kpi-value" style="color:var(--accent-emerald)">1,247</div><div class="demo-kpi-label">Aktif Müşteri</div><div class="demo-kpi-change up">↑ 8.3%</div></div>
+      <div class="demo-kpi"><div class="demo-kpi-value" style="color:var(--accent-violet)">₺1,924</div><div class="demo-kpi-label">Ort. Sipariş</div><div class="demo-kpi-change up">↑ 4.1%</div></div>
+      <div class="demo-kpi"><div class="demo-kpi-value" style="color:var(--accent-orange)">94.2%</div><div class="demo-kpi-label">Hedef Gerçekleşme</div><div class="demo-kpi-change down">↓ 1.2%</div></div>
+      <div class="demo-charts">
+        <div class="demo-chart-box">
+          <div class="demo-chart-title">Aylık Gelir Trendi</div>
+          <div class="bar-chart"><div class="bar-group"><div class="bar blue" style="height:45%"></div><div class="bar-label">Oca</div></div><div class="bar-group"><div class="bar cyan" style="height:55%"></div><div class="bar-label">Şub</div></div><div class="bar-group"><div class="bar blue" style="height:50%"></div><div class="bar-label">Mar</div></div><div class="bar-group"><div class="bar cyan" style="height:70%"></div><div class="bar-label">Nis</div></div><div class="bar-group"><div class="bar blue" style="height:65%"></div><div class="bar-label">May</div></div><div class="bar-group"><div class="bar cyan" style="height:80%"></div><div class="bar-label">Haz</div></div><div class="bar-group"><div class="bar blue" style="height:75%"></div><div class="bar-label">Tem</div></div><div class="bar-group"><div class="bar cyan" style="height:90%"></div><div class="bar-label">Ağu</div></div><div class="bar-group"><div class="bar blue" style="height:85%"></div><div class="bar-label">Eyl</div></div><div class="bar-group"><div class="bar cyan" style="height:95%"></div><div class="bar-label">Eki</div></div><div class="bar-group"><div class="bar blue" style="height:88%"></div><div class="bar-label">Kas</div></div><div class="bar-group"><div class="bar cyan" style="height:100%"></div><div class="bar-label">Ara</div></div></div>
+        </div>
+        <div class="demo-chart-box">
+          <div class="demo-chart-title">Kategori Dağılımı</div>
+          <div class="donut-chart"><svg viewBox="0 0 140 140"><circle cx="70" cy="70" r="54" fill="none" stroke="var(--border)" stroke-width="14"/><circle cx="70" cy="70" r="54" fill="none" stroke="var(--accent-blue)" stroke-width="14" stroke-dasharray="135 204" transform="rotate(-90 70 70)"/><circle cx="70" cy="70" r="54" fill="none" stroke="var(--accent-cyan)" stroke-width="14" stroke-dasharray="85 254" stroke-dashoffset="-135" transform="rotate(-90 70 70)"/><circle cx="70" cy="70" r="54" fill="none" stroke="var(--accent-violet)" stroke-width="14" stroke-dasharray="68 271" stroke-dashoffset="-220" transform="rotate(-90 70 70)"/><circle cx="70" cy="70" r="54" fill="none" stroke="var(--accent-emerald)" stroke-width="14" stroke-dasharray="51 288" stroke-dashoffset="-288" transform="rotate(-90 70 70)"/><text x="70" y="66" text-anchor="middle" fill="var(--text-primary)" font-family="JetBrains Mono" font-size="16" font-weight="700">₺2.4M</text><text x="70" y="82" text-anchor="middle" fill="var(--text-muted)" font-family="Outfit" font-size="9">Toplam</text></svg></div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:8px">
+            <span style="display:flex;align-items:center;gap:4px;font-size:.7rem;color:var(--text-muted)"><span style="width:8px;height:8px;border-radius:2px;background:var(--accent-blue)"></span>Teknoloji %40</span>
+            <span style="display:flex;align-items:center;gap:4px;font-size:.7rem;color:var(--text-muted)"><span style="width:8px;height:8px;border-radius:2px;background:var(--accent-cyan)"></span>Finans %25</span>
+            <span style="display:flex;align-items:center;gap:4px;font-size:.7rem;color:var(--text-muted)"><span style="width:8px;height:8px;border-radius:2px;background:var(--accent-violet)"></span>Perakende %20</span>
+            <span style="display:flex;align-items:center;gap:4px;font-size:.7rem;color:var(--text-muted)"><span style="width:8px;height:8px;border-radius:2px;background:var(--accent-emerald)"></span>Diğer %15</span>
+          </div>
+        </div>
+      </div>
+      <div class="demo-charts" style="margin-top:1rem">
+        <div class="demo-chart-box">
+          <div class="demo-chart-title">En Çok Satan Ürünler</div>
+          <table style="width:100%;border-collapse:collapse;font-size:.82rem">
+            <thead><tr style="border-bottom:1px solid var(--border)"><th style="text-align:left;padding:8px 4px;color:var(--text-muted);font-weight:500">Ürün</th><th style="text-align:right;padding:8px 4px;color:var(--text-muted);font-weight:500">Satış</th><th style="text-align:right;padding:8px 4px;color:var(--text-muted);font-weight:500">Gelir</th><th style="text-align:right;padding:8px 4px;color:var(--text-muted);font-weight:500">Trend</th></tr></thead>
+            <tbody>
+              <tr style="border-bottom:1px solid var(--border)"><td style="padding:10px 4px;color:var(--text-primary)">Dashboard Pro</td><td style="text-align:right;padding:10px 4px;color:var(--text-secondary);font-family:'JetBrains Mono',monospace;font-size:.78rem">342</td><td style="text-align:right;padding:10px 4px;color:var(--text-secondary);font-family:'JetBrains Mono',monospace;font-size:.78rem">₺680K</td><td style="text-align:right;padding:10px 4px;color:var(--accent-emerald);font-size:.78rem">↑ 24%</td></tr>
+              <tr style="border-bottom:1px solid var(--border)"><td style="padding:10px 4px;color:var(--text-primary)">SQL Optimize</td><td style="text-align:right;padding:10px 4px;color:var(--text-secondary);font-family:'JetBrains Mono',monospace;font-size:.78rem">287</td><td style="text-align:right;padding:10px 4px;color:var(--text-secondary);font-family:'JetBrains Mono',monospace;font-size:.78rem">₺540K</td><td style="text-align:right;padding:10px 4px;color:var(--accent-emerald);font-size:.78rem">↑ 18%</td></tr>
+              <tr style="border-bottom:1px solid var(--border)"><td style="padding:10px 4px;color:var(--text-primary)">Excel Otomasyon</td><td style="text-align:right;padding:10px 4px;color:var(--text-secondary);font-family:'JetBrains Mono',monospace;font-size:.78rem">198</td><td style="text-align:right;padding:10px 4px;color:var(--text-secondary);font-family:'JetBrains Mono',monospace;font-size:.78rem">₺380K</td><td style="text-align:right;padding:10px 4px;color:var(--accent-emerald);font-size:.78rem">↑ 12%</td></tr>
+              <tr><td style="padding:10px 4px;color:var(--text-primary)">Veri Mimarisi</td><td style="text-align:right;padding:10px 4px;color:var(--text-secondary);font-family:'JetBrains Mono',monospace;font-size:.78rem">156</td><td style="text-align:right;padding:10px 4px;color:var(--text-secondary);font-family:'JetBrains Mono',monospace;font-size:.78rem">₺420K</td><td style="text-align:right;padding:10px 4px;color:#ef4444;font-size:.78rem">↓ 3%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="demo-chart-box">
+          <div class="demo-chart-title">Bölgesel Performans</div>
+          <div style="display:flex;flex-direction:column;gap:12px;padding-top:4px">
+            <div><div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-size:.82rem;color:var(--text-secondary)">İstanbul</span><span style="font-size:.78rem;font-family:'JetBrains Mono',monospace;color:var(--text-muted)">₺960K</span></div><div style="height:6px;border-radius:3px;background:var(--border);overflow:hidden"><div style="width:85%;height:100%;border-radius:3px;background:linear-gradient(90deg,var(--accent-blue),var(--accent-cyan))"></div></div></div>
+            <div><div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-size:.82rem;color:var(--text-secondary)">Ankara</span><span style="font-size:.78rem;font-family:'JetBrains Mono',monospace;color:var(--text-muted)">₺520K</span></div><div style="height:6px;border-radius:3px;background:var(--border);overflow:hidden"><div style="width:55%;height:100%;border-radius:3px;background:linear-gradient(90deg,var(--accent-blue),var(--accent-cyan))"></div></div></div>
+            <div><div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-size:.82rem;color:var(--text-secondary)">İzmir</span><span style="font-size:.78rem;font-family:'JetBrains Mono',monospace;color:var(--text-muted)">₺380K</span></div><div style="height:6px;border-radius:3px;background:var(--border);overflow:hidden"><div style="width:40%;height:100%;border-radius:3px;background:linear-gradient(90deg,var(--accent-blue),var(--accent-cyan))"></div></div></div>
+            <div><div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-size:.82rem;color:var(--text-secondary)">Bursa</span><span style="font-size:.78rem;font-family:'JetBrains Mono',monospace;color:var(--text-muted)">₺280K</span></div><div style="height:6px;border-radius:3px;background:var(--border);overflow:hidden"><div style="width:30%;height:100%;border-radius:3px;background:linear-gradient(90deg,var(--accent-blue),var(--accent-cyan))"></div></div></div>
+            <div><div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-size:.82rem;color:var(--text-secondary)">Antalya</span><span style="font-size:.78rem;font-family:'JetBrains Mono',monospace;color:var(--text-muted)">₺260K</span></div><div style="height:6px;border-radius:3px;background:var(--border);overflow:hidden"><div style="width:27%;height:100%;border-radius:3px;background:linear-gradient(90deg,var(--accent-blue),var(--accent-cyan))"></div></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="demo-cta"><p>Şirketinize özel dashboard için iletişime geçin</p><a href="#iletisim" onclick="event.preventDefault();document.getElementById('iletisim').scrollIntoView({behavior:'smooth',block:'start'})" class="btn-primary" style="display:inline-flex;padding:10px 24px;font-size:.9rem">Demo Talep Et →</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="hakkimizda" class="alt-bg">
+  <div class="section-header reveal"><div class="section-label">// Hakkımızda</div><h2 class="section-title">Veri Dünyasında Güvenilir Ortağınız</h2></div>
+  <div class="about-content">
+    <div class="about-visual reveal">
+      <div class="about-ring">
+        <div class="orbit-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="12" width="4" height="8" rx="1" fill="var(--accent-orange)"/><rect x="10" y="8" width="4" height="12" rx="1" fill="var(--accent-blue)"/><rect x="17" y="4" width="4" height="16" rx="1" fill="var(--accent-cyan)"/></svg></div>
+        <div class="orbit-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="7" rx="8" ry="3" stroke="var(--accent-blue)" stroke-width="1.5"/><path d="M4 7v5c0 1.66 3.58 3 8 3s8-1.34 8-3V7" stroke="var(--accent-blue)" stroke-width="1.5"/></svg></div>
+        <div class="orbit-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="var(--accent-emerald)" stroke-width="1.5"/><line x1="3" y1="9" x2="21" y2="9" stroke="var(--accent-emerald)" stroke-width="1" opacity=".5"/><line x1="9" y1="3" x2="9" y2="21" stroke="var(--accent-emerald)" stroke-width="1" opacity=".5"/></svg></div>
+        <div class="orbit-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="var(--accent-violet)" stroke-width="1.5" fill="rgba(139,92,246,.15)"/></svg></div>
+        <div class="about-center"><svg width="42" height="42" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" stroke="var(--accent-cyan)" stroke-width="1.5" opacity=".3"/><circle cx="24" cy="24" r="10" fill="rgba(59,130,246,.15)" stroke="var(--accent-blue)" stroke-width="1.5"/><circle cx="24" cy="24" r="3" fill="var(--accent-blue)"/></svg><div class="about-center-text">ALB DATA</div></div>
+      </div>
+    </div>
+    <div class="about-text reveal">
+      <h3>Veriye Dayalı Kararlar, Büyüyen İşletmeler</h3>
+      <p>Alb Data Solutions olarak, işletmelerin verilerinden maksimum değer elde etmelerini sağlıyoruz. Power BI, SQL ve Excel alanlarındaki derin uzmanlığımızla, karmaşık veri problemlerini çözümlere çeviriyoruz.</p>
+      <p>Her projede müşterilerimizin iş süreçlerini anlıyor, özel çözümler geliştiriyor ve uzun vadeli stratejiler oluşturuyoruz.</p>
+      <div class="about-stats">
+        <div class="about-stat"><div class="about-stat-num">10+</div><div class="about-stat-label">Yıllık Deneyim</div></div>
+        <div class="about-stat"><div class="about-stat-num">50+</div><div class="about-stat-label">Mutlu Müşteri</div></div>
+        <div class="about-stat"><div class="about-stat-num">7/24</div><div class="about-stat-label">Destek</div></div>
+        <div class="about-stat"><div class="about-stat-num">%100</div><div class="about-stat-label">Özel Çözüm</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="fiyatlandirma" style="position:relative;overflow:hidden">
+  <div class="parallax-shape" style="width:350px;height:350px;background:var(--accent-emerald);top:10%;left:-120px"></div>
+  <div class="section-header reveal"><div class="section-label">// Çözüm Paketleri</div><h2 class="section-title">İhtiyacınıza Özel Çözümler</h2><p class="section-desc">Her işletmenin ihtiyacı farklıdır. Size en uygun paketi birlikte belirleyelim.</p></div>
+  <div class="pricing-grid">
+    <div class="pricing-card reveal"><div class="pricing-name">Başlangıç Paketi</div><div class="pricing-price" style="font-size:1.8rem;margin-bottom:.5rem">Hızlı Başlangıç</div><div class="pricing-period">Küçük ve orta ölçekli projeler için</div><ul class="pricing-features"><li><svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="9" fill="rgba(16,185,129,.15)"/><path d="M5.5 9l2.5 2.5 4.5-5" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Tek dashboard tasarımı</span></li><li><svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="9" fill="rgba(16,185,129,.15)"/><path d="M5.5 9l2.5 2.5 4.5-5" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Temel veri kaynağı entegrasyonu</span></li><li><svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="9" fill="rgba(16,185,129,.15)"/><path d="M5.5 9l2.5 2.5 4.5-5" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>SQL sorgu optimizasyonu</span></li><li><svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="9" fill="rgba(16,185,129,.15)"/><path d="M5.5 9l2.5 2.5 4.5-5" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Proje sonrası destek</span></li></ul><a href="#iletisim" class="pricing-btn pricing-btn-secondary" style="display:block;text-decoration:none">Fiyat Alın</a></div>
+    <div class="pricing-card featured reveal"><div class="pricing-badge">Popüler</div><div class="pricing-name">Profesyonel Paket</div><div class="pricing-price" style="font-size:1.8rem;margin-bottom:.5rem">Kapsamlı Çözüm</div><div class="pricing-period">Büyüyen işletmeler için</div><ul class="pricing-features"><li><svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="9" fill="rgba(16,185,129,.15)"/><path d="M5.5 9l2.5 2.5 4.5-5" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Çoklu dashboard & raporlama</span></li><li><svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="9" fill="rgba(16,185,129,.15)"/><path d="M5.5 9l2.5 2.5 4.5-5" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Sınırsız veri kaynağı</span></li><li><svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="9" fill="rgba(16,185,129,.15)"/><path d="M5.5 9l2.5 2.5 4.5-5" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>İleri SQL & VBA otomasyon</span></li><li><svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="9" fill="rgba(16,185,129,.15)"/><path d="M5.5 9l2.5 2.5 4.5-5" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Ekip eğitimi dahil</span></li><li><svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="9" fill="rgba(16,185,129,.15)"/><path d="M5.5 9l2.5 2.5 4.5-5" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Öncelikli destek</span></li></ul><a href="#iletisim" class="pricing-btn pricing-btn-primary" style="display:block;text-decoration:none">Fiyat Alın</a></div>
+    <div class="pricing-card reveal"><div class="pricing-name">Kurumsal Paket</div><div class="pricing-price" style="font-size:1.8rem;margin-bottom:.5rem">Tam Dönüşüm</div><div class="pricing-period">Büyük ölçekli projeler için</div><ul class="pricing-features"><li><svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="9" fill="rgba(16,185,129,.15)"/><path d="M5.5 9l2.5 2.5 4.5-5" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Sınırsız dashboard & rapor</span></li><li><svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="9" fill="rgba(16,185,129,.15)"/><path d="M5.5 9l2.5 2.5 4.5-5" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Tam veri mimarisi tasarımı</span></li><li><svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="9" fill="rgba(16,185,129,.15)"/><path d="M5.5 9l2.5 2.5 4.5-5" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Azure & bulut entegrasyonu</span></li><li><svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="9" fill="rgba(16,185,129,.15)"/><path d="M5.5 9l2.5 2.5 4.5-5" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Uzun vadeli destek & SLA</span></li></ul><a href="#iletisim" class="pricing-btn pricing-btn-secondary" style="display:block;text-decoration:none">Fiyat Alın</a></div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="surec" class="alt-bg">
+  <div class="section-header reveal"><div class="section-label">// Süreç</div><h2 class="section-title">4 Adımda Veri Dönüşümü</h2></div>
+  <div class="process-timeline">
+    <div class="process-step reveal"><div class="step-number">01</div><div class="step-content"><h3>Keşif & Analiz</h3><p>Veri altyapınızı ve ihtiyaçlarınızı analiz ediyoruz.</p></div></div>
+    <div class="process-step reveal"><div class="step-number">02</div><div class="step-content"><h3>Strateji & Tasarım</h3><p>Veri modellerini tasarlıyor, prototipleri hazırlıyoruz.</p></div></div>
+    <div class="process-step reveal"><div class="step-number">03</div><div class="step-content"><h3>Geliştirme & Entegrasyon</h3><p>Çözümleri geliştiriyor, sistemlerinize entegre ediyoruz.</p></div></div>
+    <div class="process-step reveal"><div class="step-number">04</div><div class="step-content"><h3>Eğitim & Destek</h3><p>Ekibinize eğitimler veriyor ve sürekli destek sağlıyoruz.</p></div></div>
+  </div>
+</section>
+
+<!-- TECH -->
+<section id="teknoloji">
+  <div class="section-header reveal"><div class="section-label">// Teknoloji</div><h2 class="section-title">Kullandığımız Teknolojiler</h2></div>
+  <div class="tech-grid">
+    <div class="tech-item reveal"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="6" y="18" width="7" height="14" rx="2" fill="var(--accent-orange)" opacity=".7"/><rect x="16.5" y="12" width="7" height="20" rx="2" fill="var(--accent-orange)" opacity=".85"/><rect x="27" y="6" width="7" height="26" rx="2" fill="var(--accent-orange)"/></svg><div class="tech-item-name">Power BI</div><div class="tech-item-desc">BI</div></div>
+    <div class="tech-item reveal"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><ellipse cx="20" cy="12" rx="12" ry="4" stroke="var(--accent-blue)" stroke-width="2" fill="rgba(59,130,246,.1)"/><path d="M8 12v7c0 2.2 5.37 4 12 4s12-1.8 12-4v-7" stroke="var(--accent-blue)" stroke-width="2"/></svg><div class="tech-item-name">SQL Server</div><div class="tech-item-desc">DB</div></div>
+    <div class="tech-item reveal"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="6" y="6" width="28" height="28" rx="4" stroke="var(--accent-emerald)" stroke-width="2"/><line x1="6" y1="15" x2="34" y2="15" stroke="var(--accent-emerald)" stroke-width="1.5" opacity=".4"/><line x1="17" y1="6" x2="17" y2="34" stroke="var(--accent-emerald)" stroke-width="1.5" opacity=".4"/></svg><div class="tech-item-name">Excel</div><div class="tech-item-desc">Analiz</div></div>
+    <div class="tech-item reveal"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M20 6l-14 8v12l14 8 14-8V14L20 6z" stroke="var(--accent-violet)" stroke-width="2" fill="rgba(139,92,246,.1)"/></svg><div class="tech-item-name">Azure</div><div class="tech-item-desc">Bulut</div></div>
+    <div class="tech-item reveal"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="12" stroke="var(--accent-cyan)" stroke-width="2" fill="rgba(6,182,212,.1)"/><path d="M12 20h6l3-6 4 12 3-6h4" stroke="var(--accent-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="tech-item-name">Power Query</div><div class="tech-item-desc">ETL</div></div>
+    <div class="tech-item reveal"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="14" r="6" stroke="#f59e0b" stroke-width="2" fill="rgba(245,158,11,.1)"/><circle cx="12" cy="28" r="5" stroke="#f59e0b" stroke-width="2" fill="rgba(245,158,11,.1)"/><circle cx="28" cy="28" r="5" stroke="#f59e0b" stroke-width="2" fill="rgba(245,158,11,.1)"/></svg><div class="tech-item-name">Python</div><div class="tech-item-desc">Otomasyon</div></div>
+    <div class="tech-item reveal"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="8" y="10" width="10" height="10" rx="2" stroke="var(--accent-blue)" stroke-width="2" fill="rgba(59,130,246,.1)"/><rect x="22" y="10" width="10" height="10" rx="2" stroke="var(--accent-cyan)" stroke-width="2" fill="rgba(6,182,212,.1)"/><rect x="15" y="22" width="10" height="10" rx="2" stroke="var(--accent-emerald)" stroke-width="2" fill="rgba(16,185,129,.1)"/></svg><div class="tech-item-name">SSIS</div><div class="tech-item-desc">Entegrasyon</div></div>
+    <div class="tech-item reveal"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><text x="20" y="26" text-anchor="middle" font-family="JetBrains Mono" font-size="14" font-weight="700" fill="var(--accent-blue)">fx</text><rect x="6" y="6" width="28" height="28" rx="6" stroke="var(--accent-blue)" stroke-width="2" fill="none"/></svg><div class="tech-item-name">DAX</div><div class="tech-item-desc">Formüller</div></div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog" class="alt-bg">
+  <div class="section-header reveal"><div class="section-label">// Blog</div><h2 class="section-title">Veri Dünyasından Yazılar</h2></div>
+  <div class="blog-grid">
+    <div class="blog-card reveal"><div class="blog-thumb"><div class="blog-thumb-bg" style="background:linear-gradient(135deg,rgba(59,130,246,.15),rgba(6,182,212,.15))"></div><svg width="80" height="80" viewBox="0 0 80 80" fill="none"><rect x="10" y="30" width="14" height="30" rx="3" fill="var(--accent-blue)" opacity=".6"/><rect x="33" y="18" width="14" height="42" rx="3" fill="var(--accent-blue)" opacity=".8"/><rect x="56" y="8" width="14" height="52" rx="3" fill="var(--accent-blue)"/></svg></div><div class="blog-body"><div class="blog-meta"><span class="blog-category">Power BI</span><span class="blog-date">10 Mar 2026</span></div><h3>Power BI'da DAX Performansını Artırmanın 5 Yolu</h3><p class="blog-excerpt">CALCULATE yerine daha verimli alternatifler, değişken kullanımı (VAR), gereksiz sütunları kaldırma, SUMMARIZE yerine SUMMARIZECOLUMNS tercih etme ve veri modelindeki ilişkileri optimize etme gibi tekniklerle dashboard'larınızın yüklenme süresini %70'e kadar azaltabilirsiniz.</p><span class="blog-read">Devamını Oku →</span></div></div>
+    <div class="blog-card reveal"><div class="blog-thumb"><div class="blog-thumb-bg" style="background:linear-gradient(135deg,rgba(139,92,246,.15),rgba(59,130,246,.15))"></div><svg width="80" height="80" viewBox="0 0 80 80" fill="none"><ellipse cx="40" cy="28" rx="24" ry="8" stroke="var(--accent-violet)" stroke-width="3" fill="rgba(139,92,246,.15)"/><path d="M16 28v12c0 4.4 10.75 8 24 8s24-3.6 24-8V28" stroke="var(--accent-violet)" stroke-width="3"/><path d="M16 40v12c0 4.4 10.75 8 24 8s24-3.6 24-8V40" stroke="var(--accent-violet)" stroke-width="3" opacity=".5"/></svg></div><div class="blog-body"><div class="blog-meta"><span class="blog-category">SQL</span><span class="blog-date">5 Mar 2026</span></div><h3>SQL Server'da Sorgu Performansını 10x Artırın</h3><p class="blog-excerpt">Execution Plan analizi, doğru index stratejisi, sorgu yeniden yazımı, temp table vs CTE karşılaştırması ve istatistik güncelleme planları ile yavaş çalışan sorgularınızı dramatik şekilde hızlandırabilirsiniz. Gerçek müşteri projelerinden örneklerle anlatıyoruz.</p><span class="blog-read">Devamını Oku →</span></div></div>
+    <div class="blog-card reveal"><div class="blog-thumb"><div class="blog-thumb-bg" style="background:linear-gradient(135deg,rgba(16,185,129,.15),rgba(6,182,212,.15))"></div><svg width="80" height="80" viewBox="0 0 80 80" fill="none"><rect x="12" y="12" width="56" height="56" rx="8" stroke="var(--accent-emerald)" stroke-width="3" fill="none"/><path d="M20 58l8-10 8 5 10-16 10 8" stroke="var(--accent-emerald)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="blog-body"><div class="blog-meta"><span class="blog-category">Excel</span><span class="blog-date">28 Şub 2026</span></div><h3>Excel VBA ile Raporlamayı Tamamen Otomatikleştirin</h3><p class="blog-excerpt">Her ay saatlerce süren rapor hazırlığını tek bir butonla 5 dakikaya indirin. Birden fazla dosyadan veri toplama, pivot tablo oluşturma, grafik güncelleme ve e-posta ile gönderimi otomatikleştiren VBA makro örnekleri ve adım adım uygulama rehberi.</p><span class="blog-read">Devamını Oku →</span></div></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="sss">
+  <div class="section-header reveal"><div class="section-label">// SSS</div><h2 class="section-title">Merak Edilenler</h2></div>
+  <div class="faq-list">
+    <div class="faq-item reveal"><div class="faq-question" onclick="toggleFaq(this)"><span>Bir proje ne kadar sürer?</span><div class="faq-icon">+</div></div><div class="faq-answer"><div class="faq-answer-inner">Proje kapsamına bağlı olarak 2-8 hafta sürmektedir. Başlangıç paketleri 2-3, kurumsal projeler 6-8 hafta sürer.</div></div></div>
+    <div class="faq-item reveal"><div class="faq-question" onclick="toggleFaq(this)"><span>Hangi sektörlere hizmet veriyorsunuz?</span><div class="faq-icon">+</div></div><div class="faq-answer"><div class="faq-answer-inner">Finans, perakende, üretim, sağlık, lojistik ve e-ticaret başta olmak üzere birçok sektöre hizmet veriyoruz.</div></div></div>
+    <div class="faq-item reveal"><div class="faq-question" onclick="toggleFaq(this)"><span>Mevcut sistemlerle entegrasyon sağlıyor musunuz?</span><div class="faq-icon">+</div></div><div class="faq-answer"><div class="faq-answer-inner">Evet, ERP, CRM ve muhasebe yazılımlarınızla tam entegrasyon sağlıyoruz. SAP, Logo, Netsis deneyimimiz var.</div></div></div>
+    <div class="faq-item reveal"><div class="faq-question" onclick="toggleFaq(this)"><span>Proje sonrası destek var mı?</span><div class="faq-icon">+</div></div><div class="faq-answer"><div class="faq-answer-inner">Her paketimize dahil destek süreleri bulunmakta. Aylık bakım anlaşmaları ile sürekli teknik destek de sağlıyoruz.</div></div></div>
+    <div class="faq-item reveal"><div class="faq-question" onclick="toggleFaq(this)"><span>Ücretsiz keşif görüşmesi nasıl?</span><div class="faq-icon">+</div></div><div class="faq-answer"><div class="faq-answer-inner">30 dakikalık görüşmede ihtiyaçlarınızı dinliyor, özel çözüm önerisi hazırlıyoruz. Taahhüt yok.</div></div></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="referanslar" class="alt-bg">
+  <div class="section-header reveal"><div class="section-label">// Referanslar</div><h2 class="section-title">Müşterilerimiz Ne Diyor?</h2></div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card reveal"><div class="testimonial-stars">★★★★★</div><p class="testimonial-text">Power BI dashboardları sayesinde raporlama süremiz 3 günden 2 saate düştü.</p><div class="testimonial-author"><div class="testimonial-avatar" style="background:linear-gradient(135deg,var(--accent-blue),var(--accent-cyan))">AK</div><div class="testimonial-info"><h4>Ahmet K.</h4><span>Finans Direktörü</span></div></div></div>
+    <div class="testimonial-card reveal"><div class="testimonial-stars">★★★★★</div><p class="testimonial-text">SQL optimizasyonu ile sorgu sürelerimiz %80 azaldı.</p><div class="testimonial-author"><div class="testimonial-avatar" style="background:linear-gradient(135deg,var(--accent-violet),var(--accent-blue))">SY</div><div class="testimonial-info"><h4>Selin Y.</h4><span>IT Müdürü</span></div></div></div>
+    <div class="testimonial-card reveal"><div class="testimonial-stars">★★★★★</div><p class="testimonial-text">Excel otomasyon çözümleri iş yükümüzü yarıya indirdi.</p><div class="testimonial-author"><div class="testimonial-avatar" style="background:linear-gradient(135deg,var(--accent-emerald),var(--accent-cyan))">ME</div><div class="testimonial-info"><h4>Mehmet E.</h4><span>Operasyon Müdürü</span></div></div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="iletisim">
+  <div class="section-header reveal"><div class="section-label">// İletişim</div><h2 class="section-title">Projenizi Konuşalım</h2></div>
+  <div class="contact-wrapper">
+    <div class="contact-info reveal">
+      <h3>Birlikte Başaralım</h3>
+      <p>Veri altyapınızı güçlendirmek istiyorsanız, sizinle görüşmekten mutluluk duyarız.</p>
+      <div class="contact-item"><div class="contact-item-icon">&#128231;</div><div class="contact-item-text"><h4>E-posta</h4><a href="#" id="emlLink"><span id="emlText"></span></a></div></div>
+      <div class="contact-item"><div class="contact-item-icon">&#128241;</div><div class="contact-item-text"><h4>Telefon</h4><a href="tel:+905340761211">+90 534 076 12 11</a></div></div>
+      <div class="contact-item"><div class="contact-item-icon">&#128205;</div><div class="contact-item-text"><h4>Konum</h4><p>İstanbul, Türkiye</p></div></div>
+      <div class="contact-item"><div class="contact-item-icon">&#128336;</div><div class="contact-item-text"><h4>Çalışma Saatleri</h4><p>Pzt-Cuma: 09:00-18:00</p></div></div>
+      <div class="social-links">
+        <a href="https://linkedin.com/company/albdata" target="_blank" class="social-link" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        <a href="https://twitter.com/albdata" target="_blank" class="social-link" aria-label="X/Twitter"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="https://instagram.com/albdata" target="_blank" class="social-link" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+      </div>
+    </div>
+    <div class="contact-form reveal" id="contactForm">
+      <div class="form-row"><div class="form-group"><label>Ad Soyad</label><input type="text" id="fname" placeholder="Adınız Soyadınız" required><div class="form-error" id="fnameErr"><svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="6" fill="#ef4444"/><text x="6" y="9" text-anchor="middle" fill="#fff" font-size="9" font-weight="700">!</text></svg><span>Ad soyad gerekli</span></div></div><div class="form-group"><label>E-posta</label><input type="email" id="femail" placeholder="ornek@sirket.com" required><div class="form-error" id="femailErr"><svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="6" fill="#ef4444"/><text x="6" y="9" text-anchor="middle" fill="#fff" font-size="9" font-weight="700">!</text></svg><span>Geçerli e-posta girin</span></div></div></div>
+      <div class="form-row"><div class="form-group"><label>Telefon</label><input type="tel" id="fphone" placeholder="+90 5XX XXX XX XX"></div><div class="form-group"><label>Hizmet</label><select id="fservice"><option value="">Seçiniz...</option><option>Power BI</option><option>SQL & Veritabanı</option><option>Excel & Otomasyon</option><option>Diğer</option></select><div class="form-error" id="fserviceErr"><svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="6" fill="#ef4444"/><text x="6" y="9" text-anchor="middle" fill="#fff" font-size="9" font-weight="700">!</text></svg><span>Hizmet seçiniz</span></div></div></div>
+      <div class="form-group"><label>Mesajınız</label><textarea id="fmsg" placeholder="Projeniz hakkında bilgi verin..." required></textarea><div class="form-error" id="fmsgErr"><svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="6" fill="#ef4444"/><text x="6" y="9" text-anchor="middle" fill="#fff" font-size="9" font-weight="700">!</text></svg><span>Mesaj gerekli</span></div></div>
+      <button class="btn-submit" id="submitBtn" onclick="handleSubmit()">Gönder →</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-left"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE4AAAAkCAYAAAAnxQwhAAABCGlDQ1BJQ0MgUHJvZmlsZQAAeJxjYGA8wQAELAYMDLl5JUVB7k4KEZFRCuwPGBiBEAwSk4sLGHADoKpv1yBqL+viUYcLcKakFicD6Q9ArFIEtBxopAiQLZIOYWuA2EkQtg2IXV5SUAJkB4DYRSFBzkB2CpCtkY7ETkJiJxcUgdT3ANk2uTmlyQh3M/Ck5oUGA2kOIJZhKGYIYnBncAL5H6IkfxEDg8VXBgbmCQixpJkMDNtbGRgkbiHEVBYwMPC3MDBsO48QQ4RJQWJRIliIBYiZ0tIYGD4tZ2DgjWRgEL7AwMAVDQsIHG5TALvNnSEfCNMZchhSgSKeDHkMyQx6QJYRgwGDIYMZAKbWPz9HbOBQAAAVpUlEQVR42pWaeZBl113fP+fc7e29L9P7LOpZNItGo5Esj8YeWcZYyFgQS5EtsMA2SRkIRRyCSUJSuEIqCUk5KSiIYwpDJVAgSEGiQIiNKVtBiy1LlmS1Z0YjzT69v17e/t59995z8se97777ukeieFPd/eYu55zf9v2tIjt1rwbQWqO1BgFoQGjQgviT+IqOfgmB6LkBQgiElGit0FohkNErOn5PAwKBECLcM7wR/w7f0WgdrSfCPeJnhUYnztY5g0YnzqOjnQjpEJrej4j2EjFxIf23obtzTYOUEoRGKh2ERKJ6DgGdzfRupgkQQkbPJg4YMaJVrxJ4HoY0ISI6Jq7DdCJBxSvoxHOis2J4R6v4vt6xRviEAqERgpjJ0XF6P1p0f+h9tofJvbyNzx4+HzJAJl+KFxKx+EOJx+QIhOxRu85VEKACHwWc/ujHGZyeoVouoQOFkHKXtHXiX7xOvL/q0aXIJEJG71ScBLOT2q816GgZIROaEzE05EEkIKEjZYh4IKJ3IqXpGkVHIzWmQKJRsel0DqJRIW87nBIdaXTVvqtFCqUUlm2R7R+mf+YgszOTXBx6gRuXL1Mvb+Ok06Ci1zuaqhOkxxYjusRq0WMDsZYJEQk+eq/Dz46GxAIQ3SVV9F6sGzI6S+d+wtDoPZfocJUujBlW38QXQlzqrqI7+BU/rxP23isZjUJpTSaXJ5XNojyPPTmTibERBkfH2TN/BBW0WV9axHacHijo4FesEclN2GVnCJlgY4dirWMrEF3ux5aCAKVUD1YKDcjuNlrriB7dI6aOUJK86WihFAkT1TrCi0iy8fWEYSa/dDQtV8hjWBa+7+EHHuNjI2RzWXLZFIY0OPrgI5w4c5bq9iZ+4GEYMjxMEnvi00bm0Vk/8bPLSSVMqatluusIhI4dRsw00aGamOYOT2Iz7TyvdO92CQcjO1zRSsVg3eNl6fVsCAEKgiAgCAJy/QMIw6TdbBB4HkII2jismIOIwycx80M0Woq5e87yyE98iv6RUSrlEq7b6gXzyGt1TJ9edwAIlFJopboeInlepXZ5fR17kl5gjJ2STjocjVY6wlIVfhe3gdTouIbVN/GFXeCc0MJOyCBEdHANQhpIKZi9825GpmZplIqMzu4llckyMnMIe2wOgWAwl6cwOU616XHzygpzR+/k4Q+fYyCXw1OwWSwSBB6WZScO2NkvBI0Oc2Po72hFaLc9Ic7usCkR+iS8ftKTCt2FJ9HBzuQiopcvnY9hFSLGid1s7WiajqQgDQvTtsnk8wzv2UOjWibwfQan5ph970Nk+8ZJZ7Js3HibtTdfZX5PP2PjY8yeOkRhfIyXn1tgZCDNqbtPcPjOw0zv3cv6+jqb6+sY0oz3klEcFzoB2YMtMY7pxB8hkD3g3Ut0B7NjCyLhBHUHzLoOKo4nRa/KiYTnEJmpe8K4T7B7Y8IQAyFx0mlM08aybPqHh9ncKDI0McfAyB58z2NrfY3K1go6aNNu1DEsi8LgMFJrDp84wQ8++ffYTo+z8OL3eezMJJcvXEOrgJrb5tmvfp03X3sFP1AIISP96QSinYC31xLic2puG2eyy7XshsfOhaQWitswuFcBRYdxp+JzJkGz80amMIAgxJZ2u4XtpHBbTeaOv5d0bpCgVaNe3aa0tojyPNK5PPsOzZNOOWjPw3WbVMpl1pZXOXL/vQyd/RGmhtP018tsX7+KEJLM3v1YDvz65/4p5e0tLMvahbc7iY0J1Alvr0WIj+IdOBdpkd7BpCSWxw5DiNCMxW5eCwRm1ywTWikEKvBxsv2c+NCTXHrxz1m5fJFsoY/AazM8fYC+wSG2Fq/RaLhopRkYm6NQ6GNgoI+B4X7GR0cYGhwik0lh2Ral8javPPcsr/zur7Px6E9wcu8QpVqApIW3WaFSr1CvVTEMo4dpPeCRME0AQ0hUFG+Gsdw7qFschiaI1LoblorbpI1xVtSbrekIWg2rMPmFZCAooqAxjGEU7comleISqWyB4YkZytubTB89jXSrFJdXaQeQzffhODaWKTGiw5UrNZaWV7lxa4lrNxapNVucfeiDlG5d462FBcbvOcNAwaC8tk6ztMnNi+e5+uYFLMvqunyZyFNFF3OV0iil8DwfwzB6CY6DeJBRfCqFRBoydsaCMDZLenUhBIaU3SwqEVSLKKCNHZUGU8QZwW2SYK1oVdZpNWoMzxxiYGae0tYG/UOjrH7/JQaHBzFMm81SCSE0tmXR9ny8SgXHscnnsvT3ZRkaHcOSBs//zYtcvb7Extoqa+sVnKEByuU6QrWpVWtIKWPTkVLQbLr4viKdtpERyCutSdk26ZRDIZ/l1vIapmkQBN1wSmjwVYDvBwRKhVlDEJDOZ2ONllEaGIcdWlNttMhl05G5hwm9EKBUwpx1GBmaWuvYlkMvouO4RkoDzwtIZXI0tla49doGY/uOoLTPxuoSc3fexdT0NOWXX+HG5QsYhkk6l6Wv0M/I+BgTo0McPbiP/r5+vv3yG7yxcB6EIPB8KmtbLC6V8ZpNAh1QLq7E0GQYklq1zlNPPMK5M3fz+X/9m9TqTVqNFr/8Tz7DreU1SpUqn3z8h3jsxz4HlkUqk8I0TdCaluvy+KMf5MEzd2NbFkLCwsUrfOUP/pxmy0VISb1eA6XJ5DKoQGFZJj/00P383298C8eyQECr1gAgnc0gZRJTNSa6q74dGxUxkEIQ+KQzWSrVMulcjvzEXtrtJtVyiVa9TuAHmKaD1tBs1vGUj/A1vgpIp7NMTY1h2SbSkDiGSc2t0z82SuA2aJbXsQpDrJ3/LtvFtbDiIgRtz2doqJ/PfPJH2D87ybdfvcCXv/I/QEpOnjhEtdGgWm9gOxZ3HDnA4fl9PPet71KtNclm0gSez+mTR7h6Y4nXvvcmmWyaz37qMc7cexef+Ae/TCZl8957j5NNp3j+pdcol2t89lMf45OPP0y92eL8xSsAPPjAPSileeGl1/E8H8s2UYFGQsc57IDVqN7lK0Xasmm1mmSyecam92Olc0jVwPfbrC8vUa/Xabc9nFQKKQ1M08S0TWzLRiMpbZXZWNvkuRdexrAMspaJcAoELY9Wo0HVbbG+dAPXbccm6parfO6zP0a94fGP/vkX+bVf+cc8/adfo7yxTSqdIZ3K4PuKcw+8h//yH/4F6bTDr/6zn+bxT3+em0uraN9namqSQMHX/udXIVfgm8+/ytuv/G/ed+YUJ4/Oc+6Be2l7Hr/085/mZ3/p3/LIh97P6Ogov/AzT/EL/+qL/Oxn/j4z0xNkMyk+/3M/yeOf/kUaTRfDkGgNEtEtenTwJcxmNNncIFoatFstxidmGJ6YRZc36R8bZ3RmFmEY3Lpxg+Vrl/EaFUTQJmg1qGxtsHLzOq+9+BxP/+Ef82f/6y+wLIvR0T0E0qRSqdDaXKW+WWRl4SUCz8XzfKSUeH5Ati/Pox9+P7/3R8/wzDNfx201+ejD74d6g3bLxW27AKysrvPJn/6XPPCBJ1lZ2+AfPvWjtOoNMA3qtQamYWD19TM6MUqpUuP1hUvcsXeaL//On/Bvvvjb/Npv/C7DgwUmx0b4lX//JW7cXOajP/7zXLu5zG/89tP8u//8O/yn3/rv7J+b4uSxQ7SaTaQMFc0UOwtwiY/lpPHrLqNjYxQGhmhoiWqUEAFMHznGrfNvcuq+93Lp4gLVUglTGqTSaXJ9fQwNjzE5uYd9c1OMjY5w7eYqL3z7Fba3SliDe/DL61SuXWR4YoJmvcrG+utkslkqlRpn7jtOsbjCfXcdoFU7y3/8zd/j9F2H+P1shvMXL7C8ukaj2eAv/vKvWL25DJ7P03/2fzgwNwmmhQDeunyZre0yXrPF+mqRwkCBzY1VLrx1hR//+IeZnZngytUlnn/xJaq1GkHg89rCAgSaTC7FTz7xgwghWVrb5Jt/8wIttwnSiDMNMy4hIbul4ygcqW+vIqSkf+QAhiGgss7g1DQrFy8yeedx6lsVtja2MCwHrQWe54FhIOt1DLlFNl/A83walSqra6u0anXy+Sw6nadZK7G1uc7o3gO0SiUAgkDhODafefIjfPOF1/nG/3uZ60vrWKbBxx/9IO954BSmadOXy1EsbnP2/pN84smPsLhS5PEf/gBf/v1nYgeTSaeZGB/hwR94gL6BPI995Bw3FtdYOH+ZX/yZT/DFLz3NletLPPrI+0k5DpvbFfbNTHLm/rvQWnPfqaN8/le/BFrzsY+cC71wIr40rMLkF3r0LTJbGRXJMrkc/QODONk8M0ePUyk3wK1TXN9i6MBB1m9epllvorSPUhphGkhDYpsW2UKBweFBNIJr1xfZLK7h1svo9ABOJktl7RamblPaLBL4Ae22x765CR48c5rf+sqfcumt69gpm1qlxsTkHkaH+mm5Hmsb21RqDfr6CowOD/D4Rx/ia89+hz955q9Jp1N4bY+DB/Zy4ug8J47dwZGD+3j1jUv81//2DJtbJZQW/NRTP8rhg3upVltceOsqr796noMH9/PUE4/w/EtvsLhc5Od+6glmpsao1l2++/qbrKwWMaOsRmSmTuvb5CZhQGiYDI2OU+jvY2xqH8cf/mHeuHCd7e9/D0N4mAeOEKzfYOGrf4mnPJAG0nawrFSU1xoYpkGr2cJtuYxNjHP32Qe4WQporBXRjSKVjZtov83W+kZYdNSKVqWGmU6RSjlorWm3Pbx6A5FyMKOANwgUKghCSLFNvHqTdF8ez/OxLRPPD/DqjZAc24RAYaRsUo5DvdFECoFqtUEr0v0FhBA0tsvIdCrG+lTKCUMSrXFyWcxOViM61RHRU92P8zXbdkhlUigNuYzD9YU3KYyPMnbPaVavLKIbZUgVKGQcyqu3EIaJCATCsEk7NoV8nuGxMfbesZ+ZfXN4vs/m6jqk+khnU/T3TVEpb6DbNXzPx/Nccpk0Z8+cwrRMtrfL+IFi/94p3nf2NFpryuUqtmOxb26KtudhWiYA8/N7qTeazEzvYbtUIZ1K8aEPnmH+4F6Km2WkaXBgboparYFAMDkxyoPn7iNbyLJW3EIHitP3nsBttxkfHUZKSdttc+zoPIcP7Wdju4zv+5FzCAvIYXlF3KYLohW2ZdFotljbbmJmUqy+9gqbl6+QHh6jeOk8G5cvkJ2+g8LEDGMjI4xOTjF//BwjExPMzh9k36HDTIyP0arVKG1sUt7cQufHyfQNMjI/y9DYJIbtYFomvhfQX8gzNTGKVgoVKAYHCpw4Os9fff15Th47RD6fxQ8URw7uo9FoEQRhWfzwwf20PZ9jhw8gpaRaq9Notmg0m1RqNYJAcfTwfqQhMQzJA/ed5K+/8S1mpyeY3DOKW6tz7MgdPPrwOY4ePoCUAhUo9s1O4ThOmDEkaqcyrj7o3kqEUgrDTtM3PkuzVmXx2ttsrC7RqG6wvfAdnMYamf4CXrPG+uJN8ntmWV1ZxkwVmD99iLbncev6VW68/RaLN2/ieoJ6tU7/8fcxdOQQuryF5XvYBvT1D6GDAMMQbG2XuXJ9ibPvOYlpGLTcNkEQMDc7ge/7eJ6HDhSZtMOR+b2kHAuv7dF2Xe4/dQy35RIEAVpDuVKlXK6hgjCY9yPTDoKAZqvF3MwkQghaTReZSnHt+iIXLl3l7uMHaTRdTNNg4fxbTO4ZZf7ALK7bjjWuW8hMMK1TwLOcNMLKUN8u0qiVkAK0lWN1eZH69jqFfBYnnUM36ljZPP2Ts2ws3WLh5e9gm5pUOsvI3F7sbJ43nv0q2bkT3PGJJ/AvX0CvXqF47RLtRpWRUw8xMDLIzfOvY6dSZNIOb1y8TL3Rot32WCtusmfPGK9+780Qn6Sg1mhSyGXZ3CqjAsVqcZP+vhyvL1wi8AMM06DeaFGu1NCEuen6xjYt10Upza3lNaYnx7hw6SrFjW0sy6Jab3D1xhKX3r6O63oEgSKXz7K5VeLtKzeRRrfNKdKTp/Ttal3JVCxbKEQNExgcn8Zt+WjdJp3Nk3NM8rN34jWrGNqnslmkuBgWKUtbm+w/dhem7dDyHcY+8DFSBZvg5WfxSitoYdByWzSdfvzaBtde+xaGadNyQ2lbZohfvh/QbrdxHAfTNGKH4QcB6ZSDlJIgCGi5bdK2HRYLou4WgCElaPCVChtFCJQKaLba2LaFZYU5buArDDMMwk3DQAqB63kESpGyLIQUMZveoXROTy2+7bpIKbEMAyfTx2NPPs71G8tUtous37yKZZk4mSxuU1EYv5P+sSHagcJ0MrTdgHpDkRqawd1YxWm1UJU1WrUKjUaD5VvXWLrwXUortzBtB9DYthlXL8LyksSx7a5AAdsycSwbhY6rHbZt9tTWZFRS7xArZdi5QmukkKRsK7wWKUlshoYRu0rTkDiRA+oOOOiuxvVWzkViJIE4BZOGxE7nGZ+aZau4ghTQdl2atTJ7ZvaTnzlKoAr4lStY+QzZkTkMM015bRmvsQ0qwPDqqMCj2ahQKq7hNhpIy4wwViVjzLiPkBxlSY52CE3P+EWiY9jtlb57AZ13KrL3zqHsfERj7mjPJMr4Ik79pYiqp0rj1kpc/v4GlmXRPzqJkzYQaDZWlkiP7GVkZpoLlxYxVpvUF6/h5PI4uX60CFhfuY5yG7SbddqtJkJKDNMMG8Z0u/Za6HhsJSnUJPN2DtzszBhFoonS7buKv4VhOznxDgIQIDI9Giduw1wVz/V0S8MCVECgAmzbiaVtpfqwnRSlzWWy2SxSGti2hWFI1leWQ62NpplElPcl51Y6DFFq9wDNO9Orb99j+DtpWZLBO9uUYlc/AhTmzsAXkZwyiSaHRLcnKSNihRCYhkmgAkzTDgnVLtr30IGH13axnRRaKzaLmyFuCBEKQOsQa+iW6nWysx6NI8Q9ho6m7VAs0Wkw6XdjiOgZGBA60aTpKaV1h8U6TCMBFZ7ngQbDDJ2G7J3X6E4Fad19WSPQSndNRCTeUeB57bB07fv0TRxg8o5jOJaNVorS1iZaBVEnPixVa53oIdBtwHQE1AnL9Y4JCb1jEqFT8U92qt6VhXrHlEJPJ62jTaJHoAjwfZ+7jx/m4R84GzPX1AlPoZNTQB3zpLc63Nlg5zF938Nvu9SqVVKpNNVqGaRBZzZFJcMdnRwlFL2WJG7Tke+Z8xA7xzh2mfS7AjvJialeQ6NTAUk6oEjtR4cHmZ4YxzQkfuAn4rjbziu+687RgWUEe6I7jqBUmLd2JImKehk6Plhy9XfFso5JdRCkZ/4y2ZXvHRBMGt4uokRXeMlo4p14raK+jGkatNsepiEw/zYf0ysVGWqjNBCGiTQtLDuNaacxnDSmk0GaYbylA4/AbeK3m3hei8BtEfhtlOehlBcNz/ROZt6um540pR2zkz3/i/ufYvf1nUR1mKYTA63dUdvktEB3+lILosA4HNP9/yt3/eLdzI8sAAAAAElFTkSuQmCC" alt="Alb Data Solutions" class="footer-logo-img"><span class="footer-copy">&#169; 2026 Alb Data Solutions</span></div>
+    <div class="footer-links"><a href="#hizmetler">Hizmetler</a><a href="#hakkimizda">Hakkımızda</a><a href="#blog">Blog</a><a href="#iletisim">İletişim</a></div>
+    <div class="social-links" style="margin-top:0">
+      <a href="https://linkedin.com/company/albdata" target="_blank" class="social-link" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      <a href="https://twitter.com/albdata" target="_blank" class="social-link" aria-label="X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+      <a href="https://instagram.com/albdata" target="_blank" class="social-link" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/905340761211?text=Merhaba%2C%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer" class="whatsapp-fab" style="z-index:9999;pointer-events:auto" onclick="window.open('https://wa.me/905340761211?text=Merhaba%2C%20bilgi%20almak%20istiyorum.','_blank');return false;">
+  <svg viewBox="0 0 32 32" style="pointer-events:none"><path fill="#ffffff" d="M16.004 2.667A13.258 13.258 0 002.72 15.885a13.15 13.15 0 001.792 6.645L2.667 29.333l7.044-1.82a13.3 13.3 0 006.28 1.593h.006A13.277 13.277 0 0029.333 15.9 13.27 13.27 0 0016.004 2.667zm0 24.284a11.03 11.03 0 01-5.614-1.535l-.403-.239-4.178 1.08 1.115-4.022-.263-.418a10.898 10.898 0 01-1.697-5.845 11.06 11.06 0 0111.047-11.025A11.06 11.06 0 0127.06 15.9a11.073 11.073 0 01-11.056 11.051zm6.063-8.272c-.332-.167-1.966-.97-2.27-1.08-.305-.112-.527-.167-.748.167-.222.332-.86 1.08-1.054 1.302-.194.222-.389.25-.72.083-.333-.166-1.404-.517-2.674-1.65-.988-.88-1.655-1.968-1.849-2.3-.194-.334-.021-.514.146-.68.15-.15.332-.389.499-.583.166-.195.221-.334.332-.556.111-.222.056-.417-.028-.583-.083-.167-.748-1.803-1.025-2.47-.27-.648-.545-.56-.748-.57-.194-.01-.416-.012-.638-.012a1.224 1.224 0 00-.887.417c-.305.333-1.164 1.137-1.164 2.773s1.192 3.218 1.358 3.44c.166.222 2.345 3.58 5.682 5.02.794.343 1.414.548 1.897.7.797.253 1.523.218 2.096.132.64-.095 1.966-.804 2.243-1.58.278-.778.278-1.443.194-1.583-.083-.139-.305-.222-.638-.39z"/></svg>
+  <span class="wa-tip">Bize yazın!</span>
+</a>
+
+<!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookieBanner">
+  <p class="cookie-text">Bu web sitesi deneyiminizi iyileştirmek için çerezler kullanmaktadır. Devam ederek çerez politikamızı kabul etmiş olursunuz.</p>
+  <div class="cookie-btns">
+    <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Kabul Et</button>
+    <button class="cookie-btn cookie-decline" onclick="declineCookies()">Reddet</button>
+  </div>
+</div>
+
+<script data-cfasync="false">
+// Scroll effects
+window.addEventListener('scroll', function(){
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+  document.querySelectorAll('.parallax-shape').forEach(function(s){
+    var r = s.parentElement.getBoundingClientRect();
+    s.style.transform = 'translateY(' + (r.top * 0.05) + 'px)';
+  });
+  // Scroll to top button
+  var stb = document.getElementById('scrollTop');
+  if(stb) stb.classList.toggle('visible', window.scrollY > 500);
+  // Active nav highlight
+  var current = '';
+  document.querySelectorAll('section[id]').forEach(function(s){
+    if(window.scrollY >= s.offsetTop - 150) current = s.getAttribute('id');
+  });
+  document.querySelectorAll('.nav-center a').forEach(function(a){
+    a.classList.remove('active');
+    if(a.getAttribute('href') === '#' + current) a.classList.add('active');
+  });
+});
+
+// Mobile menu
+function toggleMenu(){ document.getElementById('mobileMenu').classList.toggle('open'); }
+function closeMenu(){ document.getElementById('mobileMenu').classList.remove('open'); }
+
+// Counter animation
+function animateCounters(){
+  document.querySelectorAll('.metric-number').forEach(function(c){
+    var t = +c.dataset.target, d = 2000, s = performance.now();
+    function u(n){
+      var p = Math.min((n - s) / d, 1);
+      var e = 1 - Math.pow(1 - p, 3);
+      c.textContent = Math.round(t * e) + (t < 100 ? '%' : '+');
+      if(p < 1) requestAnimationFrame(u);
+    }
+    requestAnimationFrame(u);
+  });
+}
+
+// Reveal on scroll
+var obs = new IntersectionObserver(function(entries){
+  entries.forEach(function(en){
+    if(en.isIntersecting){ en.target.classList.add('visible'); obs.unobserve(en.target); }
+  });
+}, {threshold: 0.05, rootMargin: '0px 0px -30px 0px'});
+document.querySelectorAll('.reveal').forEach(function(el){ obs.observe(el); });
+setTimeout(function(){ document.querySelectorAll('.reveal:not(.visible)').forEach(function(el){ el.classList.add('visible'); }); }, 3000);
+
+// Counter trigger
+var m = document.querySelector('.hero-metrics');
+if(m){
+  var mo = new IntersectionObserver(function(e){
+    if(e[0].isIntersecting){ animateCounters(); mo.disconnect(); }
+  }, {threshold: 0.1});
+  mo.observe(m);
+}
+
+// FAQ toggle
+function toggleFaq(el){
+  var it = el.parentElement;
+  var wasOpen = it.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(function(f){
+    f.classList.remove('open');
+    f.querySelector('.faq-answer').style.maxHeight = '0';
+  });
+  if(!wasOpen){
+    it.classList.add('open');
+    var a = it.querySelector('.faq-answer');
+    a.style.maxHeight = a.scrollHeight + 'px';
+  }
+}
+
+// Form submit with EmailJS + reCAPTCHA
+function handleSubmit(){
+  var valid = true;
+  var fname = document.getElementById('fname');
+  var femail = document.getElementById('femail');
+  var fservice = document.getElementById('fservice');
+  var fmsg = document.getElementById('fmsg');
+  var fphone = document.getElementById('fphone');
+  var btn = document.getElementById('submitBtn');
+
+  [fname, femail, fservice, fmsg].forEach(function(f){ f.classList.remove('error','success'); });
+  document.querySelectorAll('.form-error').forEach(function(e){ e.classList.remove('show'); });
+
+  if(!fname.value.trim()){ fname.classList.add('error'); document.getElementById('fnameErr').classList.add('show'); valid = false; }
+  else { fname.classList.add('success'); }
+
+  var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if(!emailRe.test(femail.value)){ femail.classList.add('error'); document.getElementById('femailErr').classList.add('show'); valid = false; }
+  else { femail.classList.add('success'); }
+
+  if(!fservice.value){ fservice.classList.add('error'); document.getElementById('fserviceErr').classList.add('show'); valid = false; }
+
+  if(!fmsg.value.trim()){ fmsg.classList.add('error'); document.getElementById('fmsgErr').classList.add('show'); valid = false; }
+  else { fmsg.classList.add('success'); }
+
+  if(!valid) return;
+
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span>G\u00f6nderiliyor...';
+
+  var params = {
+    from_name: fname.value.trim(),
+    from_email: femail.value.trim(),
+    phone: fphone.value.trim(),
+    service: fservice.options[fservice.selectedIndex].text,
+    message: fmsg.value.trim()
+  };
+
+  if(typeof emailjs !== 'undefined'){
+    emailjs.send('service_8g2g03s', 'template_fan2aaz', params).then(function(){ formSuccess(); }, function(err){ formError(err); });
+  } else {
+    fetch('https://api.emailjs.com/api/v1.0/email/send', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ service_id: 'service_8g2g03s', template_id: 'template_fan2aaz', user_id: 'tg5rqRiHvR9ipPY56', template_params: params, accessToken: 'tg5rqRiHvR9ipPY56' })
+    }).then(function(r){ if(r.ok || r.status === 200) formSuccess(); else r.text().then(function(t){formError(t)}); }).catch(function(err){ formError(err); });
+  }
+}
+
+function formSuccess(){
+  var btn = document.getElementById('submitBtn');
+  btn.innerHTML = '\u2713 G\u00f6nderildi!';
+  btn.style.background = 'linear-gradient(135deg,#10b981,#06b6d4)';
+  ['fname','femail','fmsg','fphone'].forEach(function(id){ var el=document.getElementById(id); if(el){el.value='';el.classList.remove('success');} });
+  var svc = document.getElementById('fservice'); if(svc) svc.selectedIndex = 0;
+  setTimeout(function(){ btn.disabled = false; btn.innerHTML = 'G\u00f6nder \u2192'; btn.style.background = ''; }, 3000);
+}
+
+function formError(err){
+  var btn = document.getElementById('submitBtn');
+  btn.disabled = false;
+  btn.innerHTML = 'Hata! Tekrar deneyin';
+  btn.style.background = 'linear-gradient(135deg,#ef4444,#dc2626)';
+  console.error('Form error:', err);
+  setTimeout(function(){ btn.innerHTML = 'G\u00f6nder \u2192'; btn.style.background = ''; }, 3000);
+}
+
+// Real-time validation clear
+document.querySelectorAll('#fname,#femail,#fmsg').forEach(function(f){
+  f.addEventListener('input', function(){
+    f.classList.remove('error');
+    var err = document.getElementById(f.id + 'Err');
+    if(err) err.classList.remove('show');
+  });
+});
+document.getElementById('fservice').addEventListener('change', function(){
+  this.classList.remove('error');
+  document.getElementById('fserviceErr').classList.remove('show');
+});
+
+// Cookie banner
+function showCookieBanner(){
+  if(!localStorage.getItem('cookieConsent')){
+    setTimeout(function(){ document.getElementById('cookieBanner').classList.add('show'); }, 3000);
+  }
+}
+function acceptCookies(){ localStorage.setItem('cookieConsent','accepted'); document.getElementById('cookieBanner').classList.remove('show'); }
+function declineCookies(){ localStorage.setItem('cookieConsent','declined'); document.getElementById('cookieBanner').classList.remove('show'); }
+showCookieBanner();
+
+// Email protection
+var eU='info',eD='albdatasolutions',eT='com';
+var emlFull=eU+String.fromCharCode(64)+eD+'.'+eT;
+var el=document.getElementById('emlLink');
+var et=document.getElementById('emlText');
+if(el){el.href='mai'+'lto:'+emlFull;el.onclick=function(){window.location.href='mai'+'lto:'+emlFull};}
+if(et){et.textContent=emlFull;}
+</script>
+</body>
+</html>
